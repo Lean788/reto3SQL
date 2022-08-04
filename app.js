@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
-app.use('/api', apiRouter);
 
 // Routes
 
@@ -24,10 +23,10 @@ app.get('*', (req, res)=> {
 
 //connection and server up
 
-db.then(()=>{
+// db.then(()=>{
     
     app.listen(PORT, () => {
         console.log(`The server is listening on port ${PORT}`)
     });
 
-}).catch((err) => console.log(err.message));
+// }).catch((err) => console.log(err.message));
