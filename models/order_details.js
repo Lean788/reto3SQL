@@ -12,13 +12,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       orders.belongsTo(models.orders, {
-        targetkey: 'id',
-        foreignKey: 'id_order'
+        foreignKey: 'id_order',
+        targetkey: 'id'
       });
 
       orders.belongsTo(models.products, {
-        targetkey: 'id',
-        foreignKey: 'id_product'
+        foreignKey: 'id_product',
+        targetkey: 'id'
       });
 
     }

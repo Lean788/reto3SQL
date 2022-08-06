@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
       });
 
       orders.hasMany(models.order_details, {
-        foreignKey: 'detail_id_order'
+        foreignKey: 'id_order',
+        targetkey: 'id'
       });
 
     }
